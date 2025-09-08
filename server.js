@@ -23,6 +23,21 @@ app.use(methodOverride("_method"));
 // Morgan for logging HTTP requests
 app.use(morgan('dev'));
 
+// public routes
+// server.js
+
+// GET /
+app.get("/", async (req, res) => {
+  res.render("index.ejs");
+});
+
+
+// private routes
+
+
+
+// --------
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
+
